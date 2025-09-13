@@ -5,6 +5,7 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import Navbar from "@/components/blocks/Navbar";
 import Skills from "@/pages/Skills";
+import Projects from "@/pages/Projects";
 
 
 function AppRouter() {
@@ -16,6 +17,7 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
 
 
