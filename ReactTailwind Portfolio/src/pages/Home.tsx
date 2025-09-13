@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import ProfileImg from "@/assets/profile.jpg";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
       >
         <img
-          src="./profile.jpg"
+          src={ProfileImg}
           alt="Suraj Sharma"
           className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] rounded-full object-cover border-4 border-primary shadow-lg"
         />
