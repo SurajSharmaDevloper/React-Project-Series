@@ -78,7 +78,7 @@ function Navbar() {
           } absolute top-full left-0 w-full md:static md:block md:w-auto md:order-1`}
         >
           <ul
-            className="flex flex-col font-medium p-4 md:p-0 mt-1 border border-gray-100 
+            className="flex flex-col font-medium p-4 md:p-0 mt-1 border border-neutral-100 
             rounded-b-lg bg-neutral-50 md:space-x-8 rtl:space-x-reverse md:flex-row 
             md:mt-0 md:border-0 md:bg-neutral-50 dark:bg-neutral-950 md:dark:bg-neutral-950 
             dark:border-gray-700"
@@ -90,8 +90,8 @@ function Navbar() {
                   className={`block py-2 px-3 md:p-0 rounded-sm transition-colors
                     ${
                       location.pathname === link.path
-                        ? "text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
-                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                        ? "text-white bg-indigo-700 md:bg-transparent md:text-indigo-700 md:dark:text-indigo-500"
+                        : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-700 md:dark:hover:text-indigo-500 dark:text-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-neutral-100 md:dark:hover:bg-transparent"
                     }`}
                 >
                   {link.name}

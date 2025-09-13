@@ -67,7 +67,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
       >
-        <a href="./Chapter4.pdf" download="SurajSharma_Resume.pdf">
+        <a href="./SurajSharma_Resume.pdf " download="SurajSharma_Resume.pdf">
           <Button
             variant="primary"
             className="px-6 py-3 font-semibold transition-transform duration-300 hover:scale-105"

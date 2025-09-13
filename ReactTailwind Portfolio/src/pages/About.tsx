@@ -5,6 +5,7 @@ import SocialLinks from "@/components/blocks/SocialLinks";
 import FrontendGrid from "@/components/blocks/FrontendGrids";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import ProfileImages from "@/assets/profile.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <motion.img
-              src="./profile.jpg"
+              src={ProfileImages}
               alt="Profile Picture"
               className="rounded-full w-48 h-48 mx-auto mb-4 border-4 border-indigo-600 dark:border-neutral-200 transition-transform duration-300 hover:scale-105"
               initial={{ scale: 0.8, opacity: 0 }}
@@ -66,9 +67,14 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <Button color="primary" className="mt-8">
-                Download C.V
-              </Button>
+              <a
+                href="./SurajSharma_Resume.pdf "
+                download="SurajSharma_Resume.pdf"
+              >
+                <Button color="primary" className="mt-8">
+                  Download C.V
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 
