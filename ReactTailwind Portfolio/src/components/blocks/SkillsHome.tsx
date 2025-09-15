@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export default function SkillsHome() {
   return (
-    <div className="bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center relative border rounded-2xl">
+    <div className="bg-neutral-100 w-full dark:bg-neutral-900 flex items-center justify-center relative border rounded-2xl">
       <div className="rounded-2xl flex flex-col md:flex-row overflow-hidden container p-10 gap-10">
         {/* Education */}
         <div className="w-full md:w-1/2">
@@ -44,7 +44,7 @@ export default function SkillsHome() {
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-8 w-full md:w-1/2">
+        <div className="flex flex-col gap-6 w-full md:w-1/2 sm">
           {/* Design Skills */}
           <div>
             <h3 className="text-lg font-bold mb-3 text-neutral-900 dark:text-neutral-100">

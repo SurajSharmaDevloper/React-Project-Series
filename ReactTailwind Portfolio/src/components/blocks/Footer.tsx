@@ -9,11 +9,11 @@ export const Footer = () => {
             <p className="text-md text-gray-400   ">Connect with me on social media</p>
         </div>
         <div className="flex justify-center space-x-8">
-          <Instagram className="h-5 text-neutral-300" />
-          <Linkedin className="h-5 text-neutral-300" />
-          <Github className="h-5 text-neutral-300" />
-          <Facebook className="h-5 text-neutral-300" />
-          <Twitter className="h-5 text-neutral-300" />
+          <Instagram className="h-5 text-neutral-300 hover:text-indigo-500" />
+          <Linkedin className="h-5 text-neutral-300 hover:text-indigo-500" />
+          <Github className="h-5 text-neutral-300 hover:text-indigo-500" />
+          <Facebook className="h-5 text-neutral-300 hover:text-indigo-500" />
+          <Twitter className="h-5 text-neutral-300 hover:text-indigo-500" />
         </div>
       </div>
       <div className="w-full p-5 flex justify-center text-sm text-gray-600 dark:text-gray-400 space-y-1 bg-neutral-950">

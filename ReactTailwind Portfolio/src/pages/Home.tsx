@@ -10,6 +10,7 @@ import Tailwind from "@/images/TailwindIcon.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { NavLink } from "react-router-dom";
 import SkillsHome from "@/components/blocks/SkillsHome";
+import Carousel from "@/components/blocks/Carousel";
 
 export default function Home() {
   return (
@@ -179,7 +180,7 @@ export default function Home() {
                 <h2 className="text-xl font-semibold text-primary mb-2 flex items-center justify-center gap-2">
                   <Wallpaper /> Design
                 </h2>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                <p className="text-sm  text-neutral-600 dark:text-neutral-400">
                   Focused on clean design and great user experience, balancing
                   aesthetics with usability.
                 </p>
@@ -237,17 +238,17 @@ export default function Home() {
       <section
         id="about"
         className={cn(
-          "relative min-h-screen flex items-center justify-center px-6 py-16",
+          "relative min-h-screen flex items-center justify-center px-5 py-16",
           "bg-neutral-50 text-neutral-900",
           "dark:bg-neutral-800 dark:text-neutral-50"
         )}
       >
-        <div className="w-[85%] mx-auto p-5">
+        <div className=" w-[95%] md:w-[90%] lg:w-[90%] mx-auto p-5">
           {/* Heading */}
-          <h1 className="text-5xl mb-5 text-center text-neutral-900 dark:text-neutral-100 font-semibold ">
+          <h1 className="text-5xl mb-5  text-neutral-900 dark:text-neutral-100 font-semibold ">
             Skills & <span className="text-indigo-500">Education</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-400">
+          <p className="text-sm sm:text-md md:text-lg text-neutral-600 dark:text-neutral-400">
             I completed my <span className="font-semibold">BCA</span>, building
             a strong foundation in computer applications and programming. I
             specialize in{" "}
@@ -263,7 +264,20 @@ export default function Home() {
           <div className="mt-10 flex justify-center">
             <SkillsHome />
           </div>
-          
+        </div>
+      </section>
+      <section className="w-full py-5 px-10 bg-neutral-100 dark:bg-neutral-800">
+        <div className="container mx-auto text-center mb-10">
+          <h1 className="text-5xl text-neutral-900 dark:text-neutral-100 font-semibold ">
+            My <span className="text-indigo-500">Projects</span>
+          </h1>
+        </div>
+        
+        <Carousel/>
+        <div className="flex justify-center mt-10">
+          <Button className="px-6 py-3 text-neutral-100 ">
+            <NavLink to="/projects">View All Projects</NavLink>
+          </Button>
         </div>
       </section>
     </>

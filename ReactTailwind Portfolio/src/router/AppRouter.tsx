@@ -6,6 +6,7 @@ import NotFound from "@/pages/NotFound";
 import Navbar from "@/components/blocks/Navbar";
 import Skills from "@/pages/Skills";
 import Projects from "@/pages/Projects";
+import { Footer } from "@/components/blocks/Footer";
 
 
 function AppRouter() {
@@ -24,6 +25,7 @@ function AppRouter() {
         {/* 404 page */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
