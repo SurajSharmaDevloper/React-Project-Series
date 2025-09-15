@@ -4,7 +4,7 @@ import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 export const Footer = () => {
   return (
     <footer className="w-full flex flex-col justify-between text-center ">
-      <div className="w-full flex justify-around p-5 bg-neutral-900">
+      <div className="w-full flex justify-around p-5 bg-neutral-900 sm:flex-col sm:space-y-2">
         <div>
             <p className="text-md text-gray-400   ">Connect with me on social media</p>
         </div>
