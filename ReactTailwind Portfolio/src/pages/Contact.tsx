@@ -62,18 +62,18 @@ export default function ContactSection() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="tel:+911234567890" className="text-primary hover:underline">
-                  <strong>Phone:</strong> (+91) 9910412709
+                  <strong>Phone:</strong><a href="" className="hover:text-blue-600"> (+91) 9910412709</a> 
                 </a>
               </li>
               <li>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:surajsharma.devloper@gmail.com" className="text-primary hover:underline">
+                <a href="mailto:surajsharma.devloper@gmail.com" className="text-primary hover:underline hover:text-blue-600">
                   surajsharma.devloper@gmail.com
                 </a>
               </li>
               <li>
                 <strong>LinkedIn:</strong>{" "}
-                <a href="https://www.linkedin.com/in/surajsharma95250/" target="_blank" className="text-primary hover:underline">
+                <a href="https://www.linkedin.com/in/surajsharma95250/" target="_blank" className="text-primary hover:underline hover:text-blue-600">
                   surajsharma95250
                 </a>
               </li>

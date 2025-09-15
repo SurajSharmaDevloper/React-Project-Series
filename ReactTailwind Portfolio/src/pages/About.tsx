@@ -6,6 +6,7 @@ import FrontendGrid from "@/components/blocks/FrontendGrids";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import ProfileImages from "@/assets/profile.jpg";
+import { Home, Mail, Phone } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -115,6 +116,35 @@ const About = () => {
             </motion.div>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="text-sm w-full flex gap-4 justify-around text-blue-600 dark:text-blue-400 hover:text-blue-500 max-sm:flex-wrap sm:gap-4"
+        >
+          <a
+            className="hover:underline"
+            href="mailto:surajsharma.devloper@gmail.com"
+          >
+            <span className="flex justify-start items-center gap-2 ">
+              <Mail className="w-4" />
+              surajsharma.devloper@gmail.com
+            </span>
+          </a>
+          <a
+            className="hover:underline"
+            href="https://maps.app.goo.gl/vigqKJvMny9yqNie6"
+          >
+            <span className="flex justify-start items-center gap-2 ">
+              <Home className="w-4" /> Faridabad, Haryana.
+            </span>
+          </a>
+          <a className="hover:underline" href="tel:+919910412709">
+            <span className="flex justify-start items-center gap-2 ">
+              <Phone className="w-4" /> +91-9910412709.
+            </span>
+          </a>
+        </motion.div>
       </motion.div>
     </div>
   );

@@ -46,8 +46,8 @@ function Navbar() {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="self-center  text-xl mg:text-2xl lg:text-2xl text-neutral-900 font-bold whitespace-nowrap dark:text-neutral-100">
-            Suraj<span className="text-indigo-500">Sharma.in</span>
+          <span className="self-center text-glow  text-xl mg:text-2xl lg:text-2xl text-neutral-900 font-bold whitespace-nowrap dark:text-neutral-100">
+            Suraj<span className="text-indigo-500 text-glow">Sharma.in</span>
           </span>
         </Link>
 
