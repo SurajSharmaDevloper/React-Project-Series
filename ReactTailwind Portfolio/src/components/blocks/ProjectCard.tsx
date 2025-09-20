@@ -3,7 +3,7 @@ const BaseUrl = "https://images.unsplash.com/photo-1511497584788-876760111969?cr
 const ProjectCard = ( {project} : any ) => {
   return (
     <>
-      <div className="relative bg-neutral-200 dark:bg-neutral-800 rounded-xl">
+      <div className="relative bg-neutral-200 dark:bg-neutral-800 rounded-xl h-[510px]">
         <a
           href="#_"
           className="block overflow-hidden group rounded-t-xl shadow-lg"
@@ -15,15 +15,14 @@ const ProjectCard = ( {project} : any ) => {
           />
         </a>
         <div className="relative mt-5 p-5">
-          <p className="uppercase font-semibold text-xs mb-2.5 text-blue-500">
-            {project.Date || "Set Date"}
-          </p>
+          
           <a href="#" className="block mb-3 hover:underline">
             <h2 className="text-2xl font-bold leading-5 text-black dark:text-white transition-colors duration-200 hover:text-sky-700 dark:hover:text-sky-700">
-              {project.Title || "Project Title"}
+              {project.title || "Project Title"}
             </h2>
           </a>
-          <p className="mb-4 text-neutral-700 dark:text-neutral-300">
+          <p className="mb-4 text-neutral-700 text-sm
+           dark:text-neutral-300 h-[120px] overflow-scroll-y no-scrollbar ">
             {project.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut."}
           </p>
           <a

@@ -14,27 +14,27 @@ interface Slide {
 
 const slidesData: Slide[] = [
   {
-    title: "Digital Prism",
-    description: "Where geometry meets art in a stunning display of light and form.",
+    title: "Loomora.in",
+    description: "A modern eCommerce platform built with React and Tailwind CSS, showcasing the latest fashion trends with a sleek, responsive design.",
     image: Coursel,
   },
   {
-    title: "Tech Haven",
-    description: "Immerse yourself in the cutting edge of technology and innovation.",
+    title: "pixel.io",
+    description: "  An eCommerce website built with React and Tailwind CSS, designed for electronic products. It features a clean, modern layout with product categories, responsive design, and a user-friendly shopping experience optimized for all devices",
     image: Coursel1,
   },
   {
-    title: "Neural Dreams",
-    description: "AI-generated masterpieces that blur the line between human and machine creativity.",
+    title: "FreshEat",
+    description: "A responsive restaurant website built with HTML, CSS, and JavaScript, featuring an elegant design with menu highlights, reservation options, and a user-friendly layout to enhance the dining experience online.",
     image: Coursel2,
   },
   {
-    title: "Neural Dreams",
-    description: "AI-generated masterpieces that blur the line between human and machine creativity.",
+    title: "Fashion Ecommerce",
+    description: "A stylish fashion eCommerce website built with HTML, CSS, and JavaScript, featuring product galleries, categories, and a responsive design that delivers a smooth shopping experience across all devices.",
     image: Coursel3,
   },{
-    title: "Neural Dreams",
-    description: "AI-generated masterpieces that blur the line between human and machine creativity.",
+    title: "Portfolio",
+    description: "A personal portfolio website built with modern web technologies, showcasing projects, skills, and experience with a clean responsive design for an engaging user experience.",
     image: Coursel4,
   },
 ];

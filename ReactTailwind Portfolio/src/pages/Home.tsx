@@ -88,7 +88,7 @@ export default function Home() {
           <NavLink to="/contact">
             <Button
               variant="outline"
-              className="px-6 py-3 font-semibold transition-transform duration-300 hover:scale-105"
+              className="px-6 py-3  font-semibold transition-transform duration-300 hover:scale-105"
             >
               Contact Me
             </Button>
@@ -225,9 +225,7 @@ export default function Home() {
           {/* Call to Action */}
           <div className="mt-5 flex justify-center gap-4">
             <NavLink to="/about">
-              <Button className="px-6 py-3 text-neutral-100  dark:text-neutral-900 ">
-                Click me
-              </Button>
+              <Button className="px-6 py-3 text-neutral-100  ">Click me</Button>
             </NavLink>
           </div>
         </div>
@@ -243,7 +241,7 @@ export default function Home() {
           "dark:bg-neutral-800 dark:text-neutral-50"
         )}
       >
-        <div className=" w-[95%] md:w-[90%] lg:w-[90%] mx-auto p-5">
+        <div className=" w-[95%] md:w-[90%] lg:w-[90%] mx-auto ">
           {/* Heading */}
           <h1 className="text-5xl mb-5  text-neutral-900 dark:text-neutral-100 font-semibold ">
             Skills & <span className="text-indigo-500">Education</span>
@@ -272,8 +270,8 @@ export default function Home() {
             My <span className="text-indigo-500">Projects</span>
           </h1>
         </div>
-        
-        <Carousel/>
+
+        <Carousel />
         <div className="flex justify-center mt-10">
           <Button className="px-6 py-3 text-neutral-100 ">
             <NavLink to="/projects">View All Projects</NavLink>

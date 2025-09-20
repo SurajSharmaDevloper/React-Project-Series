@@ -3,14 +3,62 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/blocks/ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";
+import Coursel from "@/assets/Coursel1.png";
+import Coursel1 from "@/assets/Coursel2.png";
+import Coursel2 from "@/assets/Coursel3.png";
+import Coursel3 from "@/assets/Coursel4.png";
+import Coursel4 from "@/assets/Coursel5.png";
 
 // Example project data
 const projects = [
-  { id: 1, title: "Portfolio Website", category: "React", description: "A personal portfolio website." },
-  { id: 2, title: "E-commerce Store", category: "Next.js", description: "An online shopping platform." },
-  { id: 3, title: "Landing Page", category: "HTML", description: "A responsive marketing page." },
-  { id: 4, title: "Dashboard App", category: "React", description: "Admin dashboard with charts." },
-  { id: 5, title: "Blog Platform", category: "Next.js", description: "A blog with CMS features." },
+  {
+    id: 1,
+    image: Coursel,
+    title: "Loomora.in",
+    category: "React",
+    description:
+      "A modern eCommerce platform built with React and Tailwind CSS, showcasing the latest fashion trends with a sleek, responsive design. The website features a smooth shopping experience with product listings, categories, and a stylish UI optimized for all devices..",
+  },
+  {
+    id: 2,
+    image: Coursel1,
+    title: "pixel.io",
+    category: "React",
+    description:
+      "An eCommerce website built with React and Tailwind CSS, designed for electronic products. It features a clean, modern layout with product categories, responsive design, and a user-friendly shopping experience optimized for all devices",
+  },
+  {
+    id: 3,
+    image: Coursel2,
+    title: "FreshEat",
+    category: "HTML",
+    description:
+      "A responsive restaurant website built with HTML, CSS, and JavaScript, featuring an elegant design with menu highlights, reservation options, and a user-friendly layout to enhance the dining experience online.",
+  },
+  {
+    id: 4,
+    image: Coursel3,
+    title: "Fashion Ecommerce",
+    category: "HTML",
+    description:
+      "A stylish fashion eCommerce website built with HTML, CSS, and JavaScript, featuring product galleries, categories, and a responsive design that delivers a smooth shopping experience across all devices.",
+  },
+  {
+    id: 5,
+    image: Coursel4,
+    title: "Portfolio ",
+    category: "HTML",
+    description:
+      "A personal portfolio website built with modern web technologies, showcasing projects, skills, and experience with a clean responsive design for an engaging user experience.",
+  },
+  {
+    id: 6,
+    image: "",
+    title: "Under Progress",
+    category: "Next.js",
+    description:
+      "A movie application built with modern web technologies, featuring movie listings, search functionality, and a responsive user interface for a seamless browsing experience.",
+  },
 ];
 
 // Get unique categories + add "All"
