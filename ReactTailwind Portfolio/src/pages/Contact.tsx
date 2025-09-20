@@ -21,9 +21,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-neutral-100 dark:bg-neutral-900 w-full min-h-[calc(100dvh-64px)] flex justify-center items-center text-foreground py-16 px-6 md:px-12 lg:px-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl dark:bg-neutral-900 bg-neutral-100 mx-auto">
-        
+    <section className="bg-neutral-100 dark:bg-neutral-800 w-full min-h-[calc(100dvh-64px)] flex justify-center items-center text-foreground py-16 px-6 md:px-12 lg:px-20">
+      <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl dark:bg-neutral-800 bg-neutral-100 mx-auto">
         {/* Left Side */}
         <motion.div
           className="space-y-6 flex flex-col justify-between h-full"
@@ -31,10 +30,15 @@ export default function ContactSection() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
             <h2 className="text-4xl font-bold">Get in touch</h2>
             <p className="mt-2 text-muted-foreground">
-              Have a project in mind or just want to say hello? Fill out the form below and I’ll get back to you as soon as possible.
+              Have a project in mind or just want to say hello? Fill out the
+              form below and I’ll get back to you as soon as possible.
             </p>
           </motion.div>
 
@@ -61,19 +65,33 @@ export default function ContactSection() {
             <h3 className="text-lg font-semibold">Details</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="tel:+911234567890" className="text-primary hover:underline">
-                  <strong>Phone:</strong><a href="" className="hover:text-blue-600"> (+91) 9910412709</a> 
+                <a
+                  href="tel:+911234567890"
+                  className="text-primary hover:underline"
+                >
+                  <strong>Phone:</strong>
+                  <a href="" className="hover:text-blue-600">
+                    {" "}
+                    (+91) 9910412709
+                  </a>
                 </a>
               </li>
               <li>
                 <strong>Email:</strong>{" "}
-                <a href="mailto:surajsharma.devloper@gmail.com" className="text-primary hover:underline hover:text-blue-600">
+                <a
+                  href="mailto:surajsharma.devloper@gmail.com"
+                  className="text-primary hover:underline hover:text-blue-600"
+                >
                   surajsharma.devloper@gmail.com
                 </a>
               </li>
               <li>
                 <strong>LinkedIn:</strong>{" "}
-                <a href="https://www.linkedin.com/in/surajsharma95250/" target="_blank" className="text-primary hover:underline hover:text-blue-600">
+                <a
+                  href="https://www.linkedin.com/in/surajsharma95250/"
+                  target="_blank"
+                  className="text-primary hover:underline hover:text-blue-600"
+                >
                   surajsharma95250
                 </a>
               </li>
@@ -95,33 +113,85 @@ export default function ContactSection() {
                 method="POST"
                 className="space-y-6"
               >
-                <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+                <motion.div
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
                   <div className="space-y-3">
                     <Label htmlFor="firstName">First Name</Label>
-                    <Input type="text" id="firstName" name="First name :" placeholder="First Name" required />
+                    <Input
+                      type="text"
+                      id="firstName"
+                      name="First name :"
+                      placeholder="First Name"
+                      required
+                    />
                   </div>
                   <div className="space-y-3">
                     <Label htmlFor="lastName">Last Name</Label>
-                    <Input type="text" id="lastName" name="Last name" placeholder="Last Name" required />
+                    <Input
+                      type="text"
+                      id="lastName"
+                      name="Last name"
+                      placeholder="Last Name"
+                      required
+                    />
                   </div>
                 </motion.div>
 
-                <motion.div className="space-y-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+                <motion.div
+                  className="space-y-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                >
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" name="Email :" placeholder="Email" required />
+                  <Input
+                    id="email"
+                    type="email"
+                    name="Email :"
+                    placeholder="Email"
+                    required
+                  />
                 </motion.div>
 
-                <motion.div className="space-y-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
+                <motion.div
+                  className="space-y-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                >
                   <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" name="Subject :" placeholder="Subject" required />
+                  <Input
+                    id="subject"
+                    name="Subject :"
+                    placeholder="Subject"
+                    required
+                  />
                 </motion.div>
 
-                <motion.div className="space-y-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
+                <motion.div
+                  className="space-y-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.7 }}
+                >
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" name="Messages :" placeholder="Type your message here." required />
+                  <Textarea
+                    id="message"
+                    name="Messages :"
+                    placeholder="Type your message here."
+                    required
+                  />
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                >
                   <Button type="submit" className="w-full" disabled={loading}>
                     {loading ? "Sending..." : "Send Message"}
                   </Button>

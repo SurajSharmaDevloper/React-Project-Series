@@ -73,7 +73,7 @@ const Projects = () => {
       : projects.filter((project) => project.category === filter);
 
   return (
-    <section className="bg-neutral-100 dark:bg-neutral-900 p-5">
+    <section className="bg-neutral-100 dark:bg-neutral-800 p-5">
       {/* Title Section */}
       <div className="text-center py-2">
         <motion.h1

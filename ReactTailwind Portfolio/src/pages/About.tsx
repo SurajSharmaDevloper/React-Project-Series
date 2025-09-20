@@ -16,10 +16,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-[calc(100dvh-68px)] flex items-center justify-center p-4 bg-neutral-100 dark:bg-neutral-900">
+    <div className="min-h-[calc(100dvh-68px)] flex items-center justify-center p-4 bg-neutral-100 dark:bg-neutral-800">
       {/* Card Container */}
       <motion.div
-        className="bg-neutral-200 dark:bg-neutral-800 rounded-xl shadow-2xl max-w-6xl w-full p-8"
+        className="bg-neutral-200 dark:bg-neutral-900 rounded-xl shadow-2xl max-w-6xl w-full p-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

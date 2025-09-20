@@ -43,7 +43,7 @@ export default function FrontendGrid() {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="bg-neutral-200 dark:bg-neutral-700 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+            className="bg-neutral-200 dark:bg-neutral-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
             variants={itemVariants}
           >
             <h3 className="text-lg font-semibold mb-3 text-neutral-800 dark:text-neutral-100">

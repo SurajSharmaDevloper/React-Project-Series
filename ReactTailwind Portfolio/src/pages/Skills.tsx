@@ -62,7 +62,7 @@ const Skills = () => {
       : skills.filter((skill) => skill.category === selectedCategory);
 
   return (
-    <section className="w-full py-5 bg-neutral-100 dark:bg-neutral-900">
+    <section className="w-full py-5 bg-neutral-100 dark:bg-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.h2

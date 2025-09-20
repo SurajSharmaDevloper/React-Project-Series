@@ -3,7 +3,7 @@ const BaseUrl = "https://images.unsplash.com/photo-1511497584788-876760111969?cr
 const ProjectCard = ( {project} : any ) => {
   return (
     <>
-      <div className="relative bg-neutral-200 dark:bg-neutral-800 rounded-xl h-[510px]">
+      <div className="relative bg-neutral-200 dark:bg-neutral-900 rounded-xl h-[510px]">
         <a
           href="#_"
           className="block overflow-hidden group rounded-t-xl shadow-lg"
