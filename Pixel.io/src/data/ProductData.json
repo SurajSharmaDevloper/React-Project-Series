@@ -1,0 +1,632 @@
+[
+    {
+        "id": 1,
+        "name": "Garmin Smartwatch 1",
+        "company": "Garmin",
+        "price": 1786,
+        "description": "High-quality smartwatch from Garmin with excellent performance and features.",
+        "image": "./ProductImages/Garmin Smartwatch 1.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Smartwatch"
+    },
+    {
+        "id": 2,
+        "name": "Apple iPhone 15",
+        "company": "Apple",
+        "price": 999,
+        "description": "Latest Apple iPhone with advanced camera and performance.",
+        "image": "./ProductImages/Apple iPhone 15.png",
+        "colors": [
+            "Black",
+            "White",
+            "Red"
+        ],
+        "category": "Smartphone"
+    },
+    {
+        "id": 3,
+        "name": "Samsung Galaxy Watch 6",
+        "company": "Samsung",
+        "price": 450,
+        "description": "Smartwatch from Samsung with sleek design and long battery life.",
+        "image": "./ProductImages/Samsung Galaxy Watch 6.png",
+        "colors": [
+            "Black",
+            "Silver",
+            "Gold"
+        ],
+        "category": "Smartwatch"
+    },
+    {
+        "id": 4,
+        "name": "Sony WH-1000XM5 Headphones",
+        "company": "Sony",
+        "price": 350,
+        "description": "Industry-leading noise cancelling headphones for premium audio experience.",
+        "image": "./ProductImages/Sony WH-1000XM5 Headphones.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Headphones"
+    },
+    {
+        "id": 5,
+        "name": "Dell XPS 13 Laptop",
+        "company": "Dell",
+        "price": 1200,
+        "description": "Compact and powerful laptop with InfinityEdge display.",
+        "image": "./ProductImages/Dell XPS 13 Laptop.png",
+        "colors": [
+            "Silver",
+            "White"
+        ],
+        "category": "Laptop"
+    },
+    {
+        "id": 6,
+        "name": "Canon EOS R6 Camera",
+        "company": "Canon",
+        "price": 2500,
+        "description": "Full-frame mirrorless camera with excellent low-light performance.",
+        "image": "./ProductImages/Canon EOS R6 Camera.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Camera"
+    },
+    {
+        "id": 7,
+        "name": "Apple AirPods Pro 2",
+        "company": "Apple",
+        "price": 249,
+        "description": "Wireless earbuds with active noise cancellation and spatial audio.",
+        "image": "./ProductImages/Apple AirPods Pro 2.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Earbuds"
+    },
+    {
+        "id": 8,
+        "name": "Logitech MX Master 3 Mouse",
+        "company": "Logitech",
+        "price": 99,
+        "description": "Ergonomic wireless mouse for productivity and comfort.",
+        "image": "./ProductImages/Logitech MX Master 3 Mouse.png",
+        "colors": [
+            "Black",
+            "Gray"
+        ],
+        "category": "Mouse"
+    },
+    {
+        "id": 9,
+        "name": "Samsung Galaxy S23",
+        "company": "Samsung",
+        "price": 899,
+        "description": "Latest Galaxy phone with advanced display and camera.",
+        "image": "./ProductImages/Samsung Galaxy S23.png",
+        "colors": [
+            "Black",
+            "Green",
+            "Pink"
+        ],
+        "category": "Smartphone"
+    },
+    {
+        "id": 10,
+        "name": "Apple MacBook Air M2",
+        "company": "Apple",
+        "price": 1299,
+        "description": "Lightweight laptop with powerful M2 chip.",
+        "image": "./ProductImages/Apple MacBook Air M2.png",
+        "colors": [
+            "Silver",
+            "Space Gray"
+        ],
+        "category": "Laptop"
+    },
+    {
+        "id": 11,
+        "name": "Sony Alpha a7 III Camera",
+        "company": "Sony",
+        "price": 1999,
+        "description": "Full-frame mirrorless camera with excellent image quality.",
+        "image": "./ProductImages/Sony Alpha a7 III Camera.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Camera"
+    },
+    {
+        "id": 12,
+        "name": "Bose QuietComfort Earbuds",
+        "company": "Bose",
+        "price": 279,
+        "description": "Wireless earbuds with world-class noise cancellation.",
+        "image": "./ProductImages/Bose QuietComfort Earbuds.png",
+        "colors": [
+            "Black",
+            "White"
+        ],
+        "category": "Earbuds"
+    },
+    {
+        "id": 13,
+        "name": "HP Spectre x360",
+        "company": "HP",
+        "price": 1399,
+        "description": "Convertible laptop with premium design and performance.",
+        "image": "./ProductImages/HP Spectre x360.png",
+        "colors": [
+            "Silver",
+            "Black"
+        ],
+        "category": "Laptop"
+    },
+    {
+        "id": 14,
+        "name": "Google Pixel 8",
+        "company": "Google",
+        "price": 799,
+        "description": "Google’s latest smartphone with stock Android experience.",
+        "image": "./ProductImages/Google Pixel 8.png",
+        "colors": [
+            "Black",
+            "White"
+        ],
+        "category": "Smartphone"
+    },
+    {
+        "id": 15,
+        "name": "Fitbit Charge 6",
+        "company": "Fitbit",
+        "price": 149,
+        "description": "Fitness tracker with advanced health tracking features.",
+        "image": "./ProductImages/Fitbit Charge 6.png",
+        "colors": [
+            "Black",
+            "Pink"
+        ],
+        "category": "Fitness Tracker"
+    },
+    {
+        "id": 16,
+        "name": "OnePlus 12",
+        "company": "OnePlus",
+        "price": 699,
+        "description": "High-performance smartphone with fast charging.",
+        "image": "./ProductImages/OnePlus 12.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Smartphone"
+    },
+    {
+        "id": 17,
+        "name": "Logitech G Pro X Keyboard",
+        "company": "Logitech",
+        "price": 129,
+        "description": "Mechanical keyboard for gaming with RGB lighting.",
+        "image": "./ProductImages/Logitech G Pro X Keyboard.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Keyboard"
+    },
+    {
+        "id": 18,
+        "name": "Apple Watch Series 9",
+        "company": "Apple",
+        "price": 399,
+        "description": "Smartwatch with health and fitness tracking.",
+        "image": "./ProductImages/Apple Watch Series 9.png",
+        "colors": [
+            "Silver",
+            "Gold"
+        ],
+        "category": "Smartwatch"
+    },
+    {
+        "id": 19,
+        "name": "Asus ROG Zephyrus G14",
+        "company": "Asus",
+        "price": 1599,
+        "description": "Gaming laptop with powerful GPU and CPU.",
+        "image": "./ProductImages/Asus ROG Zephyrus G14.png",
+        "colors": [
+            "Black",
+            "White"
+        ],
+        "category": "Laptop"
+    },
+    {
+        "id": 20,
+        "name": "Dell Inspiron 15",
+        "company": "Dell",
+        "price": 649,
+        "description": "Reliable laptop for everyday tasks.",
+        "image": "./ProductImages/Dell Inspiron 15.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Laptop"
+    },
+    {
+        "id": 21,
+        "name": "Sony PlayStation 5",
+        "company": "Sony",
+        "price": 499,
+        "description": "Next-gen gaming console with ultra-fast loading.",
+        "image": "./ProductImages/Sony PlayStation 5.png",
+        "colors": [
+            "White",
+            "Black"
+        ],
+        "category": "Gaming Console"
+    },
+    {
+        "id": 22,
+        "name": "Microsoft Xbox Series X",
+        "company": "Microsoft",
+        "price": 499,
+        "description": "Powerful gaming console with 4K gaming support.",
+        "image": "./ProductImages/Microsoft Xbox Series X.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Gaming Console"
+    },
+    {
+        "id": 23,
+        "name": "Canon EOS M50 Camera",
+        "company": "Canon",
+        "price": 699,
+        "description": "Compact mirrorless camera for photography enthusiasts.",
+        "image": "./ProductImages/Canon EOS M50 Camera.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Camera"
+    },
+    {
+        "id": 24,
+        "name": "Bose SoundLink Speaker",
+        "company": "Bose",
+        "price": 129,
+        "description": "Portable Bluetooth speaker with great sound.",
+        "image": "./ProductImages/Bose SoundLink Speaker.png",
+        "colors": [
+            "Black",
+            "Blue"
+        ],
+        "category": "Speaker"
+    },
+    {
+        "id": 25,
+        "name": "Apple iPad Pro",
+        "company": "Apple",
+        "price": 799,
+        "description": "Powerful tablet for work and creativity.",
+        "image": "./ProductImages/Apple iPad Pro.png",
+        "colors": [
+            "Silver",
+            "Space Gray"
+        ],
+        "category": "Tablet"
+    },
+    {
+        "id": 26,
+        "name": "Samsung Galaxy Tab S9",
+        "company": "Samsung",
+        "price": 699,
+        "description": "High-end Android tablet with AMOLED display.",
+        "image": "./ProductImages/Samsung Galaxy Tab S9.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Tablet"
+    },
+    {
+        "id": 27,
+        "name": "Fitbit Versa 4",
+        "company": "Fitbit",
+        "price": 179,
+        "description": "Smartwatch with fitness and sleep tracking.",
+        "image": "./ProductImages/Fitbit Versa 4.png",
+        "colors": [
+            "Black",
+            "Pink"
+        ],
+        "category": "Smartwatch"
+    },
+    {
+        "id": 28,
+        "name": "Logitech C920 Webcam",
+        "company": "Logitech",
+        "price": 79,
+        "description": "HD webcam for streaming and video calls.",
+        "image": "./ProductImages/Logitech C920 Webcam.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Webcam"
+    },
+    {
+        "id": 29,
+        "name": "Apple MacBook Pro 14",
+        "company": "Apple",
+        "price": 1999,
+        "description": "Laptop with M2 Pro chip for high performance.",
+        "image": "./ProductImages/Apple MacBook Pro 14.png",
+        "colors": [
+            "Silver",
+            "Space Gray"
+        ],
+        "category": "Laptop"
+    },
+    {
+        "id": 30,
+        "name": "Razer BlackWidow Keyboard",
+        "company": "Razer",
+        "price": 139,
+        "description": "Mechanical gaming keyboard with RGB.",
+        "image": "./ProductImages/Razer BlackWidow Keyboard.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Keyboard"
+    },
+    {
+        "id": 31,
+        "name": "OnePlus Buds Pro",
+        "company": "OnePlus",
+        "price": 149,
+        "description": "True wireless earbuds with noise cancellation.",
+        "image": "./ProductImages/OnePlus Buds Pro.png",
+        "colors": [
+            "Black",
+            "White"
+        ],
+        "category": "Earbuds"
+    },
+    {
+        "id": 32,
+        "name": "Canon Pixma Printer",
+        "company": "Canon",
+        "price": 149,
+        "description": "Compact printer for home and office.",
+        "image": "./ProductImages/Canon Pixma Printer.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Printer"
+    },
+    {
+        "id": 33,
+        "name": "Sony Bravia 55-inch TV",
+        "company": "Sony",
+        "price": 999,
+        "description": "4K smart TV with stunning picture quality.",
+        "image": "./ProductImages/Sony Bravia 55-inch TV.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "TV"
+    },
+    {
+        "id": 34,
+        "name": "Samsung 65-inch QLED TV",
+        "company": "Samsung",
+        "price": 1199,
+        "description": "High-quality 4K QLED television.",
+        "image": "./ProductImages/Samsung 65-inch QLED TV.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "TV"
+    },
+    {
+        "id": 35,
+        "name": "Apple HomePod Mini",
+        "company": "Apple",
+        "price": 99,
+        "description": "Smart speaker with Siri integration.",
+        "image": "./ProductImages/Apple HomePod Mini.png",
+        "colors": [
+            "White",
+            "Space Gray"
+        ],
+        "category": "Speaker"
+    },
+    {
+        "id": 36,
+        "name": "Google Nest Audio",
+        "company": "Google",
+        "price": 99,
+        "description": "Smart speaker with Google Assistant.",
+        "image": "./ProductImages/Google Nest Audio.png",
+        "colors": [
+            "White",
+            "Gray"
+        ],
+        "category": "Speaker"
+    },
+    {
+        "id": 37,
+        "name": "Samsung Galaxy Watch 5",
+        "company": "Samsung",
+        "price": 299,
+        "description": "Smartwatch with fitness and health tracking.",
+        "image": "./ProductImages/Samsung Galaxy Watch 5.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Smartwatch"
+    },
+    {
+        "id": 38,
+        "name": "DJI Mini 3 Drone",
+        "company": "DJI",
+        "price": 499,
+        "description": "Compact drone with 4K camera.",
+        "image": "./ProductImages/DJI Mini 3 Drone.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Drone"
+    },
+    {
+        "id": 39,
+        "name": "GoPro Hero 12",
+        "company": "GoPro",
+        "price": 399,
+        "description": "Action camera with waterproof design.",
+        "image": "./ProductImages/GoPro Hero 12.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Camera"
+    },
+    {
+        "id": 40,
+        "name": "Ring Video Doorbell 4",
+        "company": "Ring",
+        "price": 199,
+        "description": "Smart doorbell with HD video and motion detection.",
+        "image": "./ProductImages/Ring Video Doorbell 4.png",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "category": "Smart Home"
+    },
+    {
+        "id": 41,
+        "name": "Philips Hue Smart Bulb",
+        "company": "Philips",
+        "price": 49,
+        "description": "Smart LED bulb with app control and color options.",
+        "image": "./ProductImages/Philips Hue Smart Bulb.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Smart Home"
+    },
+    {
+        "id": 42,
+        "name": "Nest Thermostat",
+        "company": "Google",
+        "price": 129,
+        "description": "Smart thermostat with energy-saving features.",
+        "image": "./ProductImages/Nest Thermostat.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Smart Home"
+    },
+    {
+        "id": 43,
+        "name": "Ring Floodlight Cam",
+        "company": "Ring",
+        "price": 249,
+        "description": "Smart security camera with floodlight.",
+        "image": "./ProductImages/Ring Floodlight Cam.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Smart Home"
+    },
+    {
+        "id": 44,
+        "name": "Anker PowerCore 26800",
+        "company": "Anker",
+        "price": 79,
+        "description": "High-capacity portable power bank.",
+        "image": "./ProductImages/Anker PowerCore 26800.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Power Bank"
+    },
+    {
+        "id": 45,
+        "name": "Samsung T7 SSD 1TB",
+        "company": "Samsung",
+        "price": 129,
+        "description": "Portable external SSD with fast read/write speeds.",
+        "image": "./ProductImages/Samsung T7 SSD 1TB.png",
+        "colors": [
+            "Silver"
+        ],
+        "category": "Storage"
+    },
+    {
+        "id": 46,
+        "name": "WD My Passport 2TB",
+        "company": "Western Digital",
+        "price": 99,
+        "description": "Portable external hard drive for backups.",
+        "image": "./ProductImages/WD My Passport 2TB.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Storage"
+    },
+    {
+        "id": 47,
+        "name": "Logitech StreamCam",
+        "company": "Logitech",
+        "price": 169,
+        "description": "Full HD webcam optimized for streaming.",
+        "image": "./ProductImages/Logitech StreamCam.png",
+        "colors": [
+            "White"
+        ],
+        "category": "Webcam"
+    },
+    {
+        "id": 48,
+        "name": "Corsair K95 RGB Platinum",
+        "company": "Corsair",
+        "price": 199,
+        "description": "Mechanical gaming keyboard with customizable RGB lighting.",
+        "image": "./ProductImages/Corsair K95 RGB Platinum.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Keyboard"
+    },
+    {
+        "id": 49,
+        "name": "Roku Streaming Stick 4K",
+        "company": "Roku",
+        "price": 49,
+        "description": "Streaming stick for 4K TV with remote control.",
+        "image": "./ProductImages/Roku Streaming Stick 4K.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Streaming Device"
+    },
+    {
+        "id": 50,
+        "name": "Amazon Fire TV Stick 4K",
+        "company": "Amazon",
+        "price": 39,
+        "description": "Streaming stick with Alexa voice remote.",
+        "image": "./ProductImages/Amazon Fire TV Stick 4K.png",
+        "colors": [
+            "Black"
+        ],
+        "category": "Streaming Device"
+    }
+]
