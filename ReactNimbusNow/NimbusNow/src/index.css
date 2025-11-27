@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* Primary Colors */
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --primary-contrast: #ffffff;
+  --surface: #ffffff80;
+  --background-light: #dfdfdf;
+  --background: #00000080;
+  --text-light: #333333;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+.bg-surface {
+  background-color: var(--surface);
+}
+.bg-background-light {
+  background-color: var(--background-light);
+}
+
+.bg-background-dark {
+  background-color: var(--background);
+}
+
+.text-primary {
+  background-color: var(--primary);
+}
+.text-primary-dark {
+  background-color: var(--primary-dark);
+}
+.text-light {
+  color: var(--text-light);
+}
+
+/* Borders */
+.border-primary {
+  border-color: var(--primary);
+}
+.border-primary-light {
+  border-color: var(--primary-light);
+}
+.border-primary-dark {
+  border-color: var(--primary-dark);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+.active\:text-primary:active {
+  color: var(--primary);
+}
