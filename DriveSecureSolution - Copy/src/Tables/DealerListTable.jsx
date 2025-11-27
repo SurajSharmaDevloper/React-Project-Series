@@ -13,20 +13,19 @@ const DealerListTable = ({
   return (
     <div className="p-6 bg-[#fff9f9] rounded-xl">
       {/* Header */}
-      <div className="flex justify-between mb-5">
+      <div className="flex max-[460px]:flex-col justify-between mb-5">
         <div>
           <h2 className="text-xl font-semibold text-[#2b3037] mb-4 border-b-2 border-[#e36e53] inline-block">
             Dealer List
           </h2>
         </div>
-        <NavLink
-          to="/admin/add_new_dealer"
-        >
-          <Button className="flex items-center gap-1">
-            <Plus />
+        <Button className="flex max-[460px]:justify-center items-center gap-1">
+          <Plus />
+          <NavLink to="/admin/add_new_dealer">
             Add New Dealer
-          </Button>
-        </NavLink>
+          </NavLink>
+        </Button>
+
 
       </div>
 
@@ -89,28 +88,18 @@ const DealerListTable = ({
                     </td>
 
                     {/* Actions */}
-                    <td className="p-4 rounded-sm border border-[#c4c8cb] flex gap-5 text-lg">
-                      <Button
-                        size="small"
-                        className="bg-green-500 hover:bg-green-600"
+                    <td className="p-4.5 rounded-sm border border-[#c4c8cb] flex gap-3 justify-between">
+                      <button className="bg-green-500 text-md hover:bg-green-600 text-white py-1 px-2.5 rounded-lg"><NavLink
+                        to="/admin/dealer_detail"
                       >
-                        <NavLink
-                          to="/admin/dealer_detail"
-                        >
-                          View
-                        </NavLink>
-                      </Button>
-                      <Button
-                        size="small"
-                        className="bg-amber-400 hover:bg-amber-500"
+                        View
+                      </NavLink></button>
+                      <button className="bg-orange-500 hover:bg-orange-600 text-white py-1 px-2.5 rounded-lg"><NavLink
+                        to="/admin/edit_dealer"
                       >
-                        <NavLink
-                          to="/admin/edit_dealer"
-                        >
-                          Edit
-                        </NavLink>
-                      </Button>
-                      <Button size="small">Delete</Button>
+                        Edit
+                      </NavLink></button>
+                      <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2.5 rounded-lg">Delete</button>
                     </td>
                   </tr>
                 ))}
@@ -130,17 +119,7 @@ const DealerListTable = ({
                     </span>
 
                     {/* Actions */}
-                    <div className="flex gap-3 text-lg">
-                      <button className="text-[#2b3037] hover:text-[#e36e53]">
-                        <EyeOffIcon />
-                      </button>
-                      <button className="text-[#2b3037] hover:text-[#e36e53]">
-                        <Edit />
-                      </button>
-                      <button className="text-[#2b3037] hover:text-red-600">
-                        <Delete />
-                      </button>
-                    </div>
+
                   </div>
 
                   <div className="text-sm text-gray-600 space-y-1">
@@ -159,6 +138,19 @@ const DealerListTable = ({
                     <p>
                       <strong>Manufacturer:</strong> {item.manufacturer}
                     </p>
+                  </div>
+                  <div className="flex w-full gap-4 mt-3">
+                    <button className="bg-green-500 hover:bg-green-600 text-white py-1 px-2.5 rounded-lg"><NavLink
+                      to="/admin/dealer_detail"
+                    >
+                      View
+                    </NavLink></button>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white py-1 px-2.5 rounded-lg"><NavLink
+                      to="/admin/edit_dealer"
+                    >
+                      Edit
+                    </NavLink></button>
+                    <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2.5 rounded-lg">Delete</button>
                   </div>
                 </div>
               ))}

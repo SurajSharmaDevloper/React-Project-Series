@@ -75,11 +75,6 @@ const IssuerPolicyMicTable = ({
                     <span className="font-semibold text-[#2b3037]">
                       {item.name}
                     </span>
-
-                    <Button className="flex items-center gap-1" size="small">
-                      <Download size={16} />
-                      Download
-                    </Button>
                   </div>
 
                   <div className="text-sm text-gray-600 space-y-1">
@@ -89,6 +84,10 @@ const IssuerPolicyMicTable = ({
                     <p>
                       <strong>Policy No:</strong> {item.policyNo}
                     </p>
+                    <Button className="flex mt-3 items-center gap-1" size="small">
+                      <Download size={16} />
+                      Download
+                    </Button>
                   </div>
                 </div>
               ))}

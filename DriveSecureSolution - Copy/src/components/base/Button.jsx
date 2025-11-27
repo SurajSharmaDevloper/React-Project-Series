@@ -11,9 +11,9 @@ const Button = ({
 }) => {
   // size variants
   const sizes = {
-    small: "px-3 py-1.5 text-sm",
+    small: "px-3 py-1 text-sm",
     medium: "px-5 py-2 text-base text-md",
-    large: "px-6 py-3 text-lg",
+    large: "px-6 py-2.5 text-lg",
   };
 
   // color / style variants

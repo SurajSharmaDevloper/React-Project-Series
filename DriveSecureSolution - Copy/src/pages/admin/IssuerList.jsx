@@ -36,7 +36,7 @@ const IssuerList = () => {
         <Bredcrumb heading="Issuer List" page="Issuer List" />
       </div>
       <div className="px-8">
-        <div className="flex bg-light p-5 rounded-2xl items-end gap-10 max-[600px]:gap-3 max-[600px]:w-full w-[60%]">
+        <div className="flex w-full max-[460px]:flex-col bg-light p-5 rounded-2xl items-end gap-10 max-[600px]:gap-3 max-[600px]:w-full ">
           <div className="w-full">
             <DropdownBox
               label="Issuer Name"
@@ -50,20 +50,20 @@ const IssuerList = () => {
               ]}
             />
           </div>
-          <div>
-            <Button className=" flex border border-[#e36e53]  items-center gap-1">
+          <div className="w-full  max-[460px]:max-w-full max-w-80">
+            <Button className=" w-full flex border border-[#e36e53]  items-center justify-center gap-1">
               <Search size={16} />
               Search
             </Button>
           </div>
         </div>
         <hr className="mt-5 text-muted" />
-        
+
         <div className="mt-8">
           <IssuerDssTable data={dummyIssuerData} />
         </div>
         <div className="flex items-center justify-between mt-10 mb-10 px-5">
-          <Button>Export</Button>
+          <Button size="small">Export</Button>
           <Pagination
             currentPage={page}
             totalPages={totalPages}

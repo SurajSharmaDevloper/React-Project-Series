@@ -115,12 +115,12 @@ const VehiclePriceTable = ({ initialData = [] }) => {
         <div className="block md:hidden divide-y divide-gray-200">
           {data.map((row, i) => (
             <div key={i} className="p-4 bg-white hover:bg-[#fff4f1] transition-colors">
-              <p className="font-bold text-[#2b3037] text-base mb-2">
+              <p className="font-bold text-gray-800  mb-2">
                 {row["Model Variant"]}
               </p>
 
               {columns.map((col) => (
-                <p key={col} className="text-sm">
+                <p key={col} className="text-sm text-gray-700">
                   <strong>{col}: </strong> {row[col]}
                 </p>
               ))}

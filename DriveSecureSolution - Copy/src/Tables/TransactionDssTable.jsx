@@ -81,7 +81,7 @@ const TransactionHistoryDssTable = ({
                     </td>
 
                     <td className="px-4 py-3 border border-[#c4c8cb] break-all">
-                      {item.transactionNumber}
+                      {item.txn}
                     </td>
                     <td className="px-4 py-3 border border-[#c4c8cb]">
                       {item.city}
@@ -124,19 +124,8 @@ const TransactionHistoryDssTable = ({
                   className="p-4 bg-white hover:bg-[#fff4f1] transition-colors"
                 >
                   <div className="flex justify-between mb-2">
-                    <span className="font-semibold text-[#2b3037]">
-                      {item.transactionNumber}
-                    </span>
-
-                    <span
-                      className={`text-sm font-medium ${item.status?.toLowerCase() === "approved"
-                        ? "text-[#22c55e]"
-                        : item.status?.toLowerCase() === "pending"
-                          ? "text-[#eab308]"
-                          : "text-[#ef4444]"
-                        }`}
-                    >
-                      {item.status}
+                    <span className="font-semibold text-sm text-wrap text-[#2b3037]">
+                      {item.txn}
                     </span>
                   </div>
 
@@ -158,17 +147,26 @@ const TransactionHistoryDssTable = ({
                     <p>
                       <strong>Remark:</strong> {item.remark || "—"}
                     </p>
-
-                    <p className="flex items-center gap-2 mt-2">
-                      <strong>Action:</strong>{" "}
-                      <td className="px-4 py-3 border border-[#c4c8cb]">
-                        <NavLink
-                          to="/admin/payment_details"
-                        >
-                          <Eye className="cursor-pointer" />
-                        </NavLink>
-                      </td>
+                    <p>
+                      <strong>Status:</strong> {<span
+                        className={`text-sm font-medium ${item.status?.toLowerCase() === "approved"
+                          ? "text-[#22c55e]"
+                          : item.status?.toLowerCase() === "pending"
+                            ? "text-[#eab308]"
+                            : "text-[#ef4444]"
+                          }`}
+                      >
+                        {item.status}
+                      </span> || "—"}
                     </p>
+                    <button className="bg-green-500 mt-3 py-1 px-3 text-light rounded">
+                      <NavLink
+                        to="/admin/payment_details"
+                      >
+                        View
+                      </NavLink>
+                    </button>
+
                   </div>
                 </div>
               ))}

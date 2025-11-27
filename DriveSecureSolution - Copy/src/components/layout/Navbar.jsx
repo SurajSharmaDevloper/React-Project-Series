@@ -45,9 +45,9 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div className="relative flex justify-center items-center gap-2">
+        <div className="relative flex justify-center items-center gap-2" ref={ref}>
           <button
-            ref={ref}
+            type="button"
             onClick={() => setOpen((s) => !s)}
             className="flex items-center gap-3 px-3 py-1 rounded hover:bg-gray-100"
             aria-expanded={open}
@@ -73,6 +73,7 @@ const Navbar = () => {
               </div>
               <div className="p-2">
                 <button
+                  type="button"
                   onClick={handleLogout}
                   className="w-full text-left px-3 py-2 rounded hover:bg-gray-100 text-sm text-red-600"
                 >

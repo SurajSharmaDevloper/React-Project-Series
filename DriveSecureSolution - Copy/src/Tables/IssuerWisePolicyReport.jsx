@@ -19,7 +19,7 @@ const IssuerWisePolicyReport = ({
     <div className="p-6 bg-[#fff9f9] rounded-xl font-[Poppins]">
 
       {/* HEADER */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex max-[400px]:flex-col max-[400px]:items-start gap-3 justify-between items-center mb-4">
         <h2 className="text-xl font-semibold text-[#111827] border-b-2 border-[#e36e53] inline-block">
           Issuer-Wise Policy Report
         </h2>

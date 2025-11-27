@@ -68,18 +68,8 @@ const DealerWisePriceListTable = ({
 
                     {/* Action Buttons */}
                     <td className="px-4 py-3 border border-[#c4c8cb] flex justify-center gap-3">
-                      <Button
-                        className="bg-amber-400 hover:bg-amber-500"
-                        size="small"
-                      >
-                        Edit
-                      </Button>
-                      <Button
-                        className="bg-red-400 hover:bg-red-500"
-                        size="small"
-                      >
-                        Delete
-                      </Button>
+                      <button className="bg-orange-500 hover:bg-orange-600 text-white py-1 px-2.5 rounded-lg">Edit</button>
+                      <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2.5 rounded-lg">Delete</button>
                     </td>
                   </tr>
                 ))}
@@ -98,14 +88,6 @@ const DealerWisePriceListTable = ({
                       {item.make} {item.model}
                     </span>
 
-                    <div className="flex gap-3 text-lg">
-                      <button className="text-[#2b3037] hover:text-[#e36e53]">
-                        <Edit2 />
-                      </button>
-                      <button className="text-[#2b3037] hover:text-red-600">
-                        <Delete />
-                      </button>
-                    </div>
                   </div>
 
                   <div className="text-sm text-gray-600 space-y-1">
@@ -121,6 +103,10 @@ const DealerWisePriceListTable = ({
                     <p>
                       <strong>Status:</strong> {item.status}
                     </p>
+                    <div className="flex w-full gap-4 mt-3">
+                      <button className="bg-orange-500 hover:bg-orange-600 text-white py-1 px-2.5 rounded-lg">Edit</button>
+                      <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2.5 rounded-lg">Delete</button>
+                    </div>
                   </div>
                 </div>
               ))}

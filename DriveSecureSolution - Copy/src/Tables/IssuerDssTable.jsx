@@ -24,7 +24,7 @@ const IssuerDssTable = ({
         <h2 className="text-xl font-semibold text-[#2b3037] mb-4 border-b-2 border-[#e36e53] inline-block">
           Issuer List
         </h2>
-        <Button className="flex items-center gap-1">
+        <Button size="small" className=" py-1.5 flex items-center">
           <Plus size={16} />
           <NavLink
             to="/admin/add_new_issuer"
@@ -159,10 +159,10 @@ const IssuerDssTable = ({
                     </p>
                   </div>
 
-                  <div className="flex gap-4 mt-3">
-                    <Eye className="cursor-pointer text-[#53e385]" />
-                    <Pencil className="cursor-pointer text-[#e36e53]" />
-                    <Trash2 className="cursor-pointer text-red-500" />
+                  <div className="flex w-full gap-4 mt-3">
+                    <button className="bg-green-500 hover:bg-green-600 text-white py-1 px-2.5 rounded-lg">View</button>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white py-1 px-2.5 rounded-lg">Edit</button>
+                    <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-2.5 rounded-lg">Delete</button>
                   </div>
                 </div>
               ))}

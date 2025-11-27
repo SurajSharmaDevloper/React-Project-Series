@@ -11,6 +11,7 @@ import NoPage from "./pages/admin/NoPage";
 // Admin pages
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import VehicalInformation from "./pages/admin/vehicalInformation";
+import InvoicePage from "./pages/admin/InvoicePage"
 
 // Dealer pages
 import DealerHome from "./pages/dealer/Home";
@@ -75,6 +76,7 @@ export default function App() {
             <Route path="policy_mic" element={<PolicyMic />} />
             <Route path="payment_details" element={<PaymentDetail />} />
             <Route path="InformationTable" element={<VehicalInformation />} />
+            <Route path="invoice_Page" element={<InvoicePage />} />
             <Route path="*" element={<NoPage />} />
           </Route>
 

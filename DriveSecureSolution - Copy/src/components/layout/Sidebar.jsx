@@ -12,6 +12,7 @@ const Sidebar = () => {
   const [openIssuer, setOpenIssuer] = useState(false);
   const [openInsurance, setOpenInsurance] = useState(false);
   const [openOther, setOpenOther] = useState(false);
+  const [openMaster, setOpenMaster] = useState(false);
 
   // Handle responsive sidebar state
   useEffect(() => {
@@ -138,6 +139,7 @@ const Sidebar = () => {
                     Issuer List
                   </NavLink>
 
+
                 </div>
               </div>
 
@@ -149,21 +151,45 @@ const Sidebar = () => {
                 Policy MIC
               </NavLink>
               <NavLink
-                to="/admin/InformationTable"
-                className={activeLink}
-                onClick={handleNavClick}
-              >
-                vehicalTable
-              </NavLink>
-
-
-              <NavLink
                 to="/admin/payment"
                 className={activeLink}
                 onClick={handleNavClick}
               >
                 Payment
               </NavLink>
+              <div>
+                <button
+                  onClick={() => setOpenMaster(!openMaster)}
+                  className="flex justify-between items-center w-full px-3 py-2 rounded-md hover:bg-gray-800 transition text-gray-300"
+                >
+                  <span>Master</span>
+                  <ChevronRight
+                    className={`h-4 w-4 transition-transform ${openMaster && "rotate-90"
+                      }`}
+                  />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openMaster ? "max-h-60" : "max-h-0"
+                    }`}
+                >
+
+                  <NavLink
+                    to="/admin/InformationTable"
+                    className={activeDropdown}
+                    onClick={handleNavClick}
+                  >
+                    Vehical List
+                  </NavLink>
+                  <NavLink
+                    to="/admin/invoice_Page"
+                    className={activeDropdown}
+                    onClick={handleNavClick}
+                  >
+                    Invoice page
+                  </NavLink>
+                </div>
+              </div>
             </>
           )}
 

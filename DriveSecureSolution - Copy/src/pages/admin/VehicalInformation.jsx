@@ -16,16 +16,16 @@ const VehicalInformation = () => {
         },
     ];
 
-return (
-    <Card>
-        <div className="text-xl font-semibold text-primary ">
-            <Bredcrumb heading="Vehical Table" page="payment" />
-        </div>
-        <div className="p-5">
-            <VehiclePriceTable data={pricingData} />
-        </div>
-    </Card>
-)
+    return (
+        <Card>
+            <div className="text-xl font-semibold text-primary ">
+                <Bredcrumb heading="Vehical Table" page="payment" />
+            </div>
+            <div className="p-5">
+                <VehiclePriceTable data={pricingData} />
+            </div>
+        </Card>
+    )
 }
 
 export default VehicalInformation
