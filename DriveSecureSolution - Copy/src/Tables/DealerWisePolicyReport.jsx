@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import Pagination from "../components/base/Pagination";
+
+const ROWS_PER_PAGE = 5;
 
 const DealerWisePolicyReport = ({
   data = [],
   noDataMessage = "No records available.",
 }) => {
-  const tableData = data.length > 0 ? data : [];
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(data.length / ROWS_PER_PAGE);
+
+  const paginatedData = data.slice(
+    (currentPage - 1) * ROWS_PER_PAGE,
+    currentPage * ROWS_PER_PAGE
+  );
+
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage((p) => p - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage((p) => p + 1);
+  };
 
   return (
-    <div className="p-6 bg-[#fff9f9] rounded-xl font-[Poppins]">
+    <div className="p-6 bg-[#fff9f9] rounded-xl font-[Poppins] border border-[#c4c8cb]">
       {/* TITLE */}
       <h2 className="text-xl font-semibold text-[#111827] mb-4 border-b-2 border-[#e36e53] inline-block">
         Dealer-Wise Policy Report
@@ -15,7 +33,7 @@ const DealerWisePolicyReport = ({
 
       {/* TABLE WRAPPER */}
       <div className="overflow-x-auto bg-white rounded-lg border border-[#c4c8cb]">
-        {tableData.length > 0 ? (
+        {paginatedData.length > 0 ? (
           <>
             {/* DESKTOP TABLE */}
             <table className="hidden md:table min-w-full text-sm">
@@ -37,7 +55,7 @@ const DealerWisePolicyReport = ({
               </thead>
 
               <tbody className="text-[#111827]">
-                {tableData.map((item, index) => (
+                {paginatedData.map((item, index) => (
                   <tr
                     key={index}
                     className="hover:bg-[#fff4f1] transition-colors"
@@ -60,11 +78,11 @@ const DealerWisePolicyReport = ({
             </table>
 
             {/* MOBILE VIEW */}
-            <div className="block md:hidden divide-y divide-gray-200">
-              {tableData.map((item, index) => (
+            <div className="block md:hidden divide-y divide-[#c4c8cb]">
+              {paginatedData.map((item, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-white hover:bg-[#fff4f1] transition-colors"
+                  className="p-4 bg-white hover:bg-[#fff4f1] border-b border-[#c4c8cb]"
                 >
                   <p className="font-semibold text-[#111827]">
                     {item.dealerName}
@@ -74,11 +92,9 @@ const DealerWisePolicyReport = ({
                     <p>
                       <b>Policy Generated:</b> {item.generated}
                     </p>
-
                     <p>
                       <b>Payout:</b> {item.payoutPercent}%
                     </p>
-
                     <p>
                       <b>Monthly Payout:</b> ${item.monthlyPayout}
                     </p>
@@ -93,6 +109,18 @@ const DealerWisePolicyReport = ({
           </div>
         )}
       </div>
+
+      {/* PAGINATION */}
+      {data.length > ROWS_PER_PAGE && (
+        <div className="mt-4 border border-[#c4c8cb] rounded-md p-3">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        </div>
+      )}
     </div>
   );
 };

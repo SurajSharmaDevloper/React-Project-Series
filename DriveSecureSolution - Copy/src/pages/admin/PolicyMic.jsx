@@ -15,7 +15,116 @@ const PolicyMic = () => {
       date: "2025-02-13",
       name: "Sneha Verma",
       policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
     },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },{
+      date: "2025-02-14",
+      name: "Rahul Sharma",
+      policyNo: "POL987654",
+    },
+    {
+      date: "2025-02-13",
+      name: "Sneha Verma",
+      policyNo: "POL123456",
+    },
+
   ];
 
   return (

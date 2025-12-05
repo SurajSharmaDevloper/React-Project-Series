@@ -1,5 +1,5 @@
 import React from "react";
-import VehiclePriceTable from "../../Tables/VehiclePriceTable";
+import VehiclePriceList from "../../Tables/VehiclePriceList";
 import Bredcrumb from "../../components/layout/Bredcrumb";
 import Card from "../../components/base/Card";
 
@@ -7,6 +7,19 @@ const PriceList = () => {
   const sampleData = [
     { make: "Honda", model: "City", idv: "8,50,000", premium: "18,500" },
     { make: "Hyundai", model: "Creta", idv: "11,00,000", premium: "23,400" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
+    { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
     { make: "Maruti", model: "Swift", idv: "6,00,000", premium: "12,800" },
   ];
 
@@ -18,8 +31,8 @@ const PriceList = () => {
       </div>
 
       {/* Table Section */}
-      <div className="px-8 py-6">
-        <VehiclePriceTable data={sampleData} />
+      <div className="px-8 py-3 mb-5">
+        <VehiclePriceList data={sampleData} />
       </div>
     </Card>
   );

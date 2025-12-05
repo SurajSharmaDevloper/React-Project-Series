@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import Pagination from "../components/base/Pagination";
+
+const ROWS_PER_PAGE = 10;
 
 const DownloadPolicyTable = ({
   data = [],
   noDataMessage = "No policies available for download.",
 }) => {
-  const tableData = data.length > 0 ? data : [];
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(data.length / ROWS_PER_PAGE);
+
+  const paginatedData = data.slice(
+    (currentPage - 1) * ROWS_PER_PAGE,
+    currentPage * ROWS_PER_PAGE
+  );
+
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage((p) => p - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage((p) => p + 1);
+  };
 
   return (
-    <div className="p-6 bg-[#fff9f9] rounded-xl">
+    <div className="p-6 bg-[#fff9f9] rounded-xl border border-[#c4c8cb]">
       {/* Header */}
       <h2 className="text-xl font-semibold text-[#2b3037] mb-4 border-b-2 border-[#e36e53] inline-block">
         Policy Downloads
@@ -15,9 +33,9 @@ const DownloadPolicyTable = ({
 
       {/* Responsive Table Container */}
       <div className="overflow-x-auto bg-white rounded-lg border border-[#c4c8cb]">
-        {tableData.length > 0 ? (
+        {paginatedData.length > 0 ? (
           <>
-            {/* 🖥️ Desktop / Tablet Table */}
+            {/* Desktop Table */}
             <table className="hidden md:table min-w-full text-sm">
               <thead className="bg-[#e36e53] text-white">
                 <tr>
@@ -37,7 +55,7 @@ const DownloadPolicyTable = ({
               </thead>
 
               <tbody className="bg-white text-[#2b3037]">
-                {tableData.map((item, index) => (
+                {paginatedData.map((item, index) => (
                   <tr
                     key={index}
                     className="hover:bg-[#fff4f1] transition-colors"
@@ -56,7 +74,7 @@ const DownloadPolicyTable = ({
                         <a
                           href={item.downloadUrl}
                           download
-                          className="px-3 py-1 rounded-md text-white bg-[#e36e53] hover:bg-[#c75d45] transition font-medium text-xs"
+                          className="px-3 py-1 rounded-md bg-[#e36e53] text-white hover:bg-[#c75d45] transition font-medium text-xs"
                         >
                           Download
                         </a>
@@ -69,12 +87,12 @@ const DownloadPolicyTable = ({
               </tbody>
             </table>
 
-            {/* 📱 Mobile Layout */}
-            <div className="block md:hidden divide-y divide-gray-200">
-              {tableData.map((item, index) => (
+            {/* Mobile Layout */}
+            <div className="block md:hidden divide-y divide-[#c4c8cb]">
+              {paginatedData.map((item, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-white hover:bg-[#fff4f1] transition-colors"
+                  className="p-4 bg-white hover:bg-[#fff4f1] border-b border-[#c4c8cb]"
                 >
                   <div className="flex justify-between mb-2">
                     <span className="font-semibold text-[#2b3037]">
@@ -99,7 +117,7 @@ const DownloadPolicyTable = ({
                       <a
                         href={item.downloadUrl}
                         download
-                        className="px-3 py-1 rounded-md text-white bg-[#e36e53] hover:bg-[#c75d45] transition font-medium text-xs"
+                        className="px-3 py-1 rounded-md bg-[#e36e53] text-white hover:bg-[#c75d45] transition font-medium text-xs"
                       >
                         Download
                       </a>
@@ -112,12 +130,21 @@ const DownloadPolicyTable = ({
             </div>
           </>
         ) : (
-          // No Data Message
-          <div className="py-10 text-center text-gray-600 text-sm bg-white rounded-lg">
-            {noDataMessage}
-          </div>
+          <div className="py-10 text-center text-gray-600">{noDataMessage}</div>
         )}
       </div>
+
+      {/* Pagination */}
+      {data.length > ROWS_PER_PAGE && (
+        <div className="mt-4 border border-[#c4c8cb] rounded-md p-3">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        </div>
+      )}
     </div>
   );
 };

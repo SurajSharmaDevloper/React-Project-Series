@@ -4,9 +4,9 @@ import { Search } from 'lucide-react'
 
 const Searchbox = () => {
   return (
-    <div>
+    <div className='flex justify-center items-center border border-primary-dark rounded-xl  px-3 py-2 shadow-md ' >
         <Input />
-        <Search/>
+        <Search size={18} />
     </div>
   )
 }

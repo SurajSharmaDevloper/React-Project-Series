@@ -1,70 +1,95 @@
 import React, { useState, useEffect } from "react";
 import InputBox from "../components/base/InputBox";
+import Pagination from "../components/base/Pagination";
+
+const ROWS_PER_PAGE = 10;
 
 const VehiclePriceTable = ({ initialData = [] }) => {
-  const [data, setData] = useState(initialData);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const [formData, setFormData] = useState({
+  // Default Dynamic Structure
+  const defaultStructure = {
     "Model Variant": "",
     "Ex Showroom price": "",
     "Insurance Amount": "",
     "Registration Amount": "",
     TOTAL: "",
-  });
-
-  // Allow only numbers
-  const allowOnlyNumbers = (value) => {
-    return value.replace(/[^0-9]/g, "");
   };
 
-  // Update fields + handle number validation
+  const initialStructure =
+    initialData.length > 0 ? initialData[0] : defaultStructure;
+
+  const [formData, setFormData] = useState(initialStructure);
+  const [data, setData] = useState(initialData);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const columns = Object.keys(formData);
+
+  /* ------------------------------------------------
+   * PAGINATION
+   * ------------------------------------------------ */
+  const totalPages = Math.ceil(data.length / ROWS_PER_PAGE);
+
+  const paginatedData = data.slice(
+    (currentPage - 1) * ROWS_PER_PAGE,
+    currentPage * ROWS_PER_PAGE
+  );
+
+  const handlePrev = () => currentPage > 1 && setCurrentPage((p) => p - 1);
+  const handleNext = () =>
+    currentPage < totalPages && setCurrentPage((p) => p + 1);
+
+  /* ------------------------------------------------
+   * ONLY NUMBERS ALLOWED
+   * ------------------------------------------------ */
+  const allowOnlyNumbers = (value) => value.replace(/[^0-9]/g, "");
+
   const updateField = (field, value) => {
-    let newValue = value;
-
-    if (field !== "Model Variant") {
-      newValue = allowOnlyNumbers(value); // only numbers for price fields
-    }
+    const numericField = field !== "Model Variant" && field !== "TOTAL";
 
     setFormData((prev) => ({
       ...prev,
-      [field]: newValue,
+      [field]: numericField ? allowOnlyNumbers(value) : value,
     }));
   };
 
-  // AUTO CALCULATE TOTAL
+  /* ------------------------------------------------
+   * AUTO CALCULATE TOTAL (NO RE-RENDER LOOP)
+   * ------------------------------------------------ */
   useEffect(() => {
-    const ex = Number(formData["Ex Showroom price"] || 0);
-    const ins = Number(formData["Insurance Amount"] || 0);
-    const reg = Number(formData["Registration Amount"] || 0);
+    const numberCols = columns.filter(
+      (col) => col !== "Model Variant" && col !== "TOTAL"
+    );
 
-    const total = ex + ins + reg;
+    const numbers = numberCols.map((col) => Number(formData[col] || 0));
+    const total = numbers.reduce((sum, n) => sum + n, 0);
 
-    setFormData((prev) => ({
-      ...prev,
-      TOTAL: total ? total.toString() : "",
-    }));
+    if (String(total) !== formData.TOTAL) {
+      setFormData((prev) => ({ ...prev, TOTAL: String(total) }));
+    }
   }, [
     formData["Ex Showroom price"],
     formData["Insurance Amount"],
     formData["Registration Amount"],
   ]);
 
-  // Submit new row
+  /* ------------------------------------------------
+   * ADD NEW ROW
+   * ------------------------------------------------ */
   const handleSubmit = () => {
-    setData([...data, formData]);
+    const newData = [...data, formData];
+    setData(newData);
+
+    // Reset form
+    const resetObj = {};
+    columns.forEach((key) => (resetObj[key] = ""));
+    setFormData(resetObj);
+
     setIsModalOpen(false);
 
-    setFormData({
-      "Model Variant": "",
-      "Ex Showroom price": "",
-      "Insurance Amount": "",
-      "Registration Amount": "",
-      TOTAL: "",
-    });
+    // Auto-jump to last page
+    setCurrentPage(Math.ceil(newData.length / ROWS_PER_PAGE));
   };
-
-  const columns = Object.keys(formData);
 
   return (
     <div className="p-6 bg-[#fff9f9] rounded-xl">
@@ -88,19 +113,16 @@ const VehiclePriceTable = ({ initialData = [] }) => {
           <thead className="bg-[#e36e53] text-white">
             <tr>
               {columns.map((col) => (
-                <th
-                  key={col}
-                  className="px-4 py-3 text-left font-medium border border-[#c4c8cb]"
-                >
+                <th key={col} className="px-4 py-3 border border-[#c4c8cb]">
                   {col}
                 </th>
               ))}
             </tr>
           </thead>
 
-          <tbody className="bg-white text-[#2b3037]">
-            {data.map((row, index) => (
-              <tr key={index} className="hover:bg-[#fff4f1] transition-colors">
+          <tbody>
+            {paginatedData.map((row, index) => (
+              <tr key={index} className="hover:bg-[#fff4f1]">
                 {columns.map((col) => (
                   <td key={col} className="px-4 py-3 border border-[#c4c8cb]">
                     {row[col]}
@@ -113,21 +135,33 @@ const VehiclePriceTable = ({ initialData = [] }) => {
 
         {/* MOBILE CARDS */}
         <div className="block md:hidden divide-y divide-gray-200">
-          {data.map((row, i) => (
-            <div key={i} className="p-4 bg-white hover:bg-[#fff4f1] transition-colors">
-              <p className="font-bold text-gray-800  mb-2">
-                {row["Model Variant"]}
+          {paginatedData.map((row, i) => (
+            <div key={i} className="p-4 bg-white hover:bg-[#fff4f1]">
+              <p className="font-bold text-gray-800 mb-2">
+                {row[columns[0]]}
               </p>
 
               {columns.map((col) => (
                 <p key={col} className="text-sm text-gray-700">
-                  <strong>{col}: </strong> {row[col]}
+                  <strong>{col}:</strong> {row[col]}
                 </p>
               ))}
             </div>
           ))}
         </div>
       </div>
+
+      {/* PAGINATION */}
+      {data.length > ROWS_PER_PAGE && (
+        <div className="mt-4">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        </div>
+      )}
 
       {/* MODAL */}
       {isModalOpen && (
@@ -137,60 +171,17 @@ const VehiclePriceTable = ({ initialData = [] }) => {
               Add Vehicle Details
             </h3>
 
-            {/* Using InputBox component */}
-            <div className="mb-3">
-              <InputBox
-                label="Model Variant"
-                value={formData["Model Variant"]}
-                onChange={(e) =>
-                  updateField("Model Variant", e.target.value)
-                }
-                placeholder="Enter model name"
-              />
-            </div>
-
-            <div className="mb-3">
-              <InputBox
-                label="Ex Showroom Price"
-                value={formData["Ex Showroom price"]}
-                onChange={(e) =>
-                  updateField("Ex Showroom price", e.target.value)
-                }
-                placeholder="0"
-              />
-            </div>
-
-            <div className="mb-3">
-              <InputBox
-                label="Insurance Amount"
-                value={formData["Insurance Amount"]}
-                onChange={(e) =>
-                  updateField("Insurance Amount", e.target.value)
-                }
-                placeholder="0"
-              />
-            </div>
-
-            <div className="mb-3">
-              <InputBox
-                label="Registration Amount"
-                value={formData["Registration Amount"]}
-                onChange={(e) =>
-                  updateField("Registration Amount", e.target.value)
-                }
-                placeholder="0"
-              />
-            </div>
-
-            <div className="mb-3">
-              <InputBox
-                label="TOTAL"
-                value={formData["TOTAL"]}
-                disabled
-                className="bg-gray-100"
-              />
-            </div>
-
+            {columns.map((col) => (
+              <div key={col} className="mb-3">
+                <InputBox
+                  label={col}
+                  value={formData[col]}
+                  onChange={(e) => updateField(col, e.target.value)}
+                  disabled={col === "TOTAL"}
+                  placeholder={`Enter ${col}`}
+                />
+              </div>
+            ))}
 
             <div className="flex justify-end gap-3 mt-5">
               <button

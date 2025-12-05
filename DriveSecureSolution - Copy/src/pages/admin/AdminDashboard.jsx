@@ -27,6 +27,35 @@ const AdminDashboard = () => {
       cancelled: 0,
       status: false,
     },
+    {
+      id: 3,
+      issuerName: "Amit Verma",
+      generated: 7,
+      pending: 3,
+      cancelled: 0,
+      status: false,
+    }, {
+      id: 4,
+      issuerName: "Amit Verma",
+      generated: 7,
+      pending: 3,
+      cancelled: 0,
+      status: false,
+    }, {
+      id: 5,
+      issuerName: "Amit Verma",
+      generated: 7,
+      pending: 3,
+      cancelled: 0,
+      status: false,
+    }, {
+      id: 6,
+      issuerName: "Amit Verma",
+      generated: 7,
+      pending: 3,
+      cancelled: 0,
+      status: false,
+    },
   ];
 
   const sampleData_1 = [
@@ -35,6 +64,36 @@ const AdminDashboard = () => {
       generated: 25,
       payoutPercent: 12,
       monthlyPayout: 3000,
+    },
+    {
+      dealerName: "Arun Auto",
+      generated: 14,
+      payoutPercent: 10,
+      monthlyPayout: 1500,
+    },
+    {
+      dealerName: "Arun Auto",
+      generated: 14,
+      payoutPercent: 10,
+      monthlyPayout: 1500,
+    },
+    {
+      dealerName: "Arun Auto",
+      generated: 14,
+      payoutPercent: 10,
+      monthlyPayout: 1500,
+    },
+    {
+      dealerName: "Arun Auto",
+      generated: 14,
+      payoutPercent: 10,
+      monthlyPayout: 1500,
+    },
+    {
+      dealerName: "Arun Auto",
+      generated: 14,
+      payoutPercent: 10,
+      monthlyPayout: 1500,
     },
     {
       dealerName: "Arun Auto",

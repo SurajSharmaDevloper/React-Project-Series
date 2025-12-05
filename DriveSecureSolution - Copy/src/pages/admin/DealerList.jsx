@@ -8,8 +8,7 @@ import DealerListTable from "../../Tables/DealerListTable";
 import Pagination from "../../components/base/Pagination";
 
 const DealerList = () => {
-  const [page, setPage] = useState(1);
-  const totalPages = 99;
+
   const dealerData = [
     {
       did: "D001",
@@ -19,6 +18,162 @@ const DealerList = () => {
       city: "Delhi",
       manufacturer: "Tata",
     },
+    {
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },{
+      did: "D001",
+      dealerName: "Sharma Motors",
+      mobile: "9876543210",
+      email: "sharma@example.com",
+      city: "Delhi",
+      manufacturer: "Tata",
+    },
+
     {
       did: "D002",
       dealerName: "Auto India",
@@ -70,15 +225,6 @@ const DealerList = () => {
         <hr className="mt-5 text-muted" />
         <div className="mt-8">
           <DealerListTable data={dealerData} />
-        </div>
-        <div className="flex items-center justify-end mt-10 mb-10 px-5">
-
-          <Pagination
-            currentPage={page}
-            totalPages={totalPages}
-            onPrev={() => setPage((p) => Math.max(1, p - 1))}
-            onNext={() => setPage((p) => Math.min(totalPages, p + 1))}
-          />
         </div>
       </div>
     </Card>

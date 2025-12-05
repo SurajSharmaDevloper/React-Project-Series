@@ -1,22 +1,38 @@
 import React, { useState } from "react";
-import ToggleButton from "../components/base/ToggleButton"; // your reusable toggle
+import Pagination from "../components/base/Pagination";
+import ToggleButton from "../components/base/ToggleButton";
+
+const ROWS_PER_PAGE = 5;
 
 const IssuerWisePolicyReport = ({
   data = [],
   noDataMessage = "No records available.",
 }) => {
   const [filterOption, setFilterOption] = useState("week");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleFilterChange = (e) => {
     setFilterOption(e.target.value);
-    // 💡 You can call API here with filterOption
-    // Example: fetchData(e.target.value);
+    setCurrentPage(1); // when filter changes, reset page
   };
 
-  const tableData = data.length > 0 ? data : [];
+  const totalPages = Math.ceil(data.length / ROWS_PER_PAGE);
+
+  const paginatedData = data.slice(
+    (currentPage - 1) * ROWS_PER_PAGE,
+    currentPage * ROWS_PER_PAGE
+  );
+
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage((p) => p - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage((p) => p + 1);
+  };
 
   return (
-    <div className="p-6 bg-[#fff9f9] rounded-xl font-[Poppins]">
+    <div className="p-6 bg-[#fff9f9] rounded-xl font-[Poppins] border border-[#c4c8cb]">
 
       {/* HEADER */}
       <div className="flex max-[400px]:flex-col max-[400px]:items-start gap-3 justify-between items-center mb-4">
@@ -40,11 +56,7 @@ const IssuerWisePolicyReport = ({
 
           {/* CUSTOM ARROW */}
           <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
-            <svg
-              className="w-4 h-4 text-[#111827]"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
+            <svg className="w-4 h-4 text-[#111827]" fill="currentColor" viewBox="0 0 20 20">
               <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
             </svg>
           </span>
@@ -53,7 +65,7 @@ const IssuerWisePolicyReport = ({
 
       {/* TABLE WRAPPER */}
       <div className="overflow-x-auto bg-white rounded-lg border border-[#c4c8cb]">
-        {tableData.length > 0 ? (
+        {paginatedData.length > 0 ? (
           <>
             {/* DESKTOP TABLE */}
             <table className="hidden md:table min-w-full text-sm">
@@ -78,11 +90,8 @@ const IssuerWisePolicyReport = ({
               </thead>
 
               <tbody className="bg-white text-[#111827]">
-                {tableData.map((item, index) => (
-                  <tr
-                    key={index}
-                    className="hover:bg-[#fff4f1] transition-colors"
-                  >
+                {paginatedData.map((item, index) => (
+                  <tr key={index} className="hover:bg-[#fff4f1] transition-colors">
                     <td className="px-4 py-3 border border-[#c4c8cb]">
                       {item.issuerName}
                     </td>
@@ -104,12 +113,12 @@ const IssuerWisePolicyReport = ({
               </tbody>
             </table>
 
-            {/* MOBILE CARD LAYOUT */}
-            <div className="block md:hidden divide-y divide-gray-200">
-              {tableData.map((item, index) => (
+            {/* MOBILE CARD VIEW */}
+            <div className="block md:hidden divide-y divide-[#c4c8cb]">
+              {paginatedData.map((item, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-white hover:bg-[#fff4f1] transition-colors"
+                  className="p-4 bg-white hover:bg-[#fff4f1] border-b border-[#c4c8cb] transition-colors"
                 >
                   <div className="flex justify-between">
                     <b className="text-[#111827]">{item.issuerName}</b>
@@ -137,6 +146,18 @@ const IssuerWisePolicyReport = ({
           </div>
         )}
       </div>
+
+      {/* PAGINATION */}
+      {data.length > ROWS_PER_PAGE && (
+        <div className="mt-4 border border-[#c4c8cb] rounded-lg p-3">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
+        </div>
+      )}
     </div>
   );
 };

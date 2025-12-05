@@ -4,17 +4,208 @@ import Bredcrumb from '../../components/layout/Bredcrumb'
 import VehiclePriceTable from '../../Tables/VehiclePriceTable';
 
 
-
 const VehicalInformation = () => {
-    const pricingData = [
+
+    const dummyVehicleData = [
         {
-            "Model Variant": "ACTIVA STD-OBD2",
-            "Ex Showroom price": "76,108",
-            "Insurance Amount": "6,845",
-            "Registration Amount": "6,706",
-            "TOTAL": "89,659",
+            "Model Variant": "Swift LXI",
+            "Ex Showroom price": "600000",
+            "Insurance Amount": "20000",
+            "Registration Amount": "45000",
+            "TOTAL": "665000",
         },
+        {
+            "Model Variant": "Swift VXI",
+            "Ex Showroom price": "700000",
+            "Insurance Amount": "21000",
+            "Registration Amount": "48000",
+            "TOTAL": "769000",
+        },
+        {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        },
+        {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }, {
+            "Model Variant": "Baleno Sigma",
+            "Ex Showroom price": "780000",
+            "Insurance Amount": "22500",
+            "Registration Amount": "52000",
+            "TOTAL": "854500",
+        },
+        {
+            "Model Variant": "Brezza ZXI+",
+            "Ex Showroom price": "1080000",
+            "Insurance Amount": "32000",
+            "Registration Amount": "68000",
+            "TOTAL": "1180000",
+        },
+        {
+            "Model Variant": "WagonR VXI",
+            "Ex Showroom price": "570000",
+            "Insurance Amount": "18500",
+            "Registration Amount": "42000",
+            "TOTAL": "630500",
+        }
     ];
+
+
 
     return (
         <Card>
@@ -22,7 +213,7 @@ const VehicalInformation = () => {
                 <Bredcrumb heading="Vehical Table" page="payment" />
             </div>
             <div className="p-5">
-                <VehiclePriceTable data={pricingData} />
+                <VehiclePriceTable initialData={dummyVehicleData} />
             </div>
         </Card>
     )

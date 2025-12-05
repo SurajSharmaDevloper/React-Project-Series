@@ -1,16 +1,12 @@
-import Navbar from "./components/sections/Navbar"
-import Sidebar from "./components/sections/Sidebar"
+import { ThemeProvider } from "./context/ThemeContext"
+import AppRoute from "./routes/route"
 
 
 function App() {
   return (
-    <>
-      <div className="h-screen w-screen bg-background-light">
-        <Navbar/>
-        <Sidebar />
-      </div>
-
-    </>
+    <ThemeProvider>
+      <AppRoute />
+    </ThemeProvider>
   )
 }
 

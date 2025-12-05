@@ -21,6 +21,119 @@ const IssuerList = () => {
       status: true,
     },
     {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    }, {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    }, {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    }, {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    }, {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    }, {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },  {
+      issuerId: "IS001",
+      issuerName: "Rahul Sharma",
+      mobile: "9876543210",
+      email: "rahul@example.com",
+      pan: "ABCDE1234F",
+      adhar: "1234 5678 9000",
+      status: true,
+    },
+    {
       issuerId: "IS002",
       issuerName: "Amit Verma",
       mobile: "9822334455",
@@ -64,12 +177,6 @@ const IssuerList = () => {
         </div>
         <div className="flex items-center justify-between mt-10 mb-10 px-5">
           <Button size="small">Export</Button>
-          <Pagination
-            currentPage={page}
-            totalPages={totalPages}
-            onPrev={() => setPage((p) => Math.max(1, p - 1))}
-            onNext={() => setPage((p) => Math.min(totalPages, p + 1))}
-          />
         </div>
       </div>
     </Card>

@@ -179,7 +179,7 @@ const Sidebar = () => {
                     className={activeDropdown}
                     onClick={handleNavClick}
                   >
-                    Vehical List
+                    Vehicle List
                   </NavLink>
                   <NavLink
                     to="/admin/invoice_Page"

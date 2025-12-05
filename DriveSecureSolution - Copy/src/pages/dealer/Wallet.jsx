@@ -56,6 +56,131 @@ const Wallet = () => {
       status: "Processing",
       remarks: "Remark",
     },
+    {
+      sno: 6,
+      date: "14/01/2022",
+      amount: "200",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    },
+    {
+      sno: 7,
+      date: "08/11/2022",
+      amount: "3000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Rejected",
+      remarks: "Remark",
+    },
+    {
+      sno: 8,
+      date: "03/10/2022",
+      amount: "5000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Approved",
+      remarks: "Remark",
+    },
+    {
+      sno: 9,
+      date: "22/04/2022",
+      amount: "8000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    }, {
+      sno: 10,
+      date: "14/01/2022",
+      amount: "200",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    },
+    {
+      sno: 11,
+      date: "08/11/2022",
+      amount: "3000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Rejected",
+      remarks: "Remark",
+    },
+    {
+      sno: 12,
+      date: "03/10/2022",
+      amount: "5000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Approved",
+      remarks: "Remark",
+    },
+    {
+      sno: 13,
+      date: "22/04/2022",
+      amount: "8000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    }, {
+      sno: 14,
+      date: "14/01/2022",
+      amount: "200",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    },
+    {
+      sno: 15,
+      date: "08/11/2022",
+      amount: "3000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Rejected",
+      remarks: "Remark",
+    },
+    {
+      sno: 16,
+      date: "03/10/2022",
+      amount: "5000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Approved",
+      remarks: "Remark",
+    },
+    {
+      sno: 17,
+      date: "22/04/2022",
+      amount: "8000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    }, {
+      sno: 18,
+      date: "14/01/2022",
+      amount: "200",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    },
+    {
+      sno: 19,
+      date: "08/11/2022",
+      amount: "3000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Rejected",
+      remarks: "Remark",
+    },
+    {
+      sno: 20,
+      date: "03/10/2022",
+      amount: "5000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Approved",
+      remarks: "Remark",
+    },
+    {
+      sno: 21,
+      date: "22/04/2022",
+      amount: "8000",
+      referenceId: "N901pPaoiDGRU92aRNCiB0V0",
+      status: "Processing",
+      remarks: "Remark",
+    },
   ];
 
   return (
@@ -89,7 +214,7 @@ const Wallet = () => {
         </div>
       </div>
 
-     <hr className="my-5 text-muted" />
+      <hr className="my-5 text-muted" />
 
       {/* History Table */}
       <div className="px-8 pb-8">

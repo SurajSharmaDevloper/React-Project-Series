@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
-body{
+html {
+  color-scheme: light dark;
+}
+
+body {
   font-family: "Poppins", sans-serif;
 }
 
 :root {
-  /* Primary Colors */
+  /* Light Mode - Primary Colors */
   --primary: #3b82f6;
   --primary-light: #60a5fa;
   --primary-dark: #2563eb;
@@ -14,6 +18,21 @@ body{
   --background-light: #dfdfdf;
   --background: #00000080;
   --text-light: #333333;
+  --primary-border: #c3c3c3;
+}
+
+html.dark {
+  /* Dark Mode - Primary Colors */
+  color-scheme: dark;
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --primary-contrast: #ffffff;
+  --surface: #ffffff80;
+  --background-light: #ffffff;
+  --background: #0f172a;
+  --text-light: #e2e8f0;
+  --primary-border: #475569;
 }
 
 .bg-primary {
@@ -37,10 +56,10 @@ body{
 }
 
 .text-primary {
-  background-color: var(--primary);
+  background-color: #333333;
 }
 .text-primary-dark {
-  background-color: var(--primary-dark);
+  background-color: #f2f2f2;
 }
 .text-light {
   color: var(--text-light);
@@ -56,7 +75,9 @@ body{
 .border-primary-dark {
   border-color: var(--primary-dark);
 }
-
+.border-primary-dark {
+  border-color: var(--primary-border);
+}
 .hover\:text-primary:hover {
   color: var(--primary);
 }
