@@ -42,6 +42,12 @@ import Payment from "./pages/admin/Payment";
 import PolicyMic from "./pages/admin/PolicyMic";
 import PaymentDetail from "./pages/admin/PaymentDetail";
 import VehiclePriceTable from "./Tables/VehiclePriceTable";
+import EndorsementList from "./pages/dealer/EndorsementList";
+import Cancellation from "./pages/dealer/Cancellation";
+import CancellationList from "./pages/dealer/CancellationList";
+import Claims from "./pages/dealer/Claims";
+import AddClaimsTable from "./pages/dealer/AddNewClaim";
+import InssuranceLists from "./pages/dealer/InssuranceLists";
 
 export default function App() {
   return (
@@ -104,6 +110,12 @@ export default function App() {
             <Route path="policy_mis" element={<DealerPolicyMis />} />
             <Route path="endorsement" element={<DealerEndorsement />} />
             <Route path="cancellation" element={<DealerCancellation />} />
+            <Route path="endorsement_list" element={<EndorsementList />} />
+            <Route path="cancellation_list" element={<CancellationList />} />
+            <Route path="claims" element={<Claims />} />
+            <Route path="add_new_claim" element={<AddClaimsTable />} />
+            <Route path="insurances" element={<InssuranceLists />} />
+
           </Route>
 
           {/* Issuer Routes */}

@@ -223,39 +223,15 @@ const Sidebar = () => {
           {/* ===================== DEALER / DEFAULT ===================== */}
           {role !== "Admin" && role !== "Issuer" && (
             <>
-              {/* Insurance Dropdown */}
-              <div>
-                <button
-                  onClick={() => setOpenInsurance(!openInsurance)}
-                  className="flex justify-between items-center w-full px-3 py-2 text-gray-300 hover:bg-gray-800 transition rounded-md"
-                >
-                  <span>Insurance</span>
-                  <ChevronRight
-                    className={`h-4 w-4 transition-transform ${openInsurance && "rotate-90"
-                      }`}
-                  />
-                </button>
 
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${openInsurance ? "max-h-40" : "max-h-0"
-                    }`}
-                >
-                  <NavLink
-                    to="/new_insurance"
-                    className={activeDropdown}
-                    onClick={handleNavClick}
-                  >
-                    New Insurance
-                  </NavLink>
-                  <NavLink
-                    to="/renew_insurance"
-                    className={activeDropdown}
-                    onClick={handleNavClick}
-                  >
-                    Renew Insurance
-                  </NavLink>
-                </div>
-              </div>
+
+              <NavLink
+                to="/insurances"
+                className={activeLink}
+                onClick={handleNavClick}
+              >
+                Insurances
+              </NavLink>
 
               <NavLink
                 to="/wallet"
@@ -297,14 +273,14 @@ const Sidebar = () => {
                     }`}
                 >
                   <NavLink
-                    to="/endorsement"
+                    to="/endorsement_list"
                     className={activeDropdown}
                     onClick={handleNavClick}
                   >
                     Endorsement
                   </NavLink>
                   <NavLink
-                    to="/cancellation"
+                    to="/cancellation_list"
                     className={activeDropdown}
                     onClick={handleNavClick}
                   >
@@ -312,6 +288,13 @@ const Sidebar = () => {
                   </NavLink>
                 </div>
               </div>
+              <NavLink
+                to="/claims"
+                className={activeLink}
+                onClick={handleNavClick}
+              >
+                Claims
+              </NavLink>
 
               <NavLink
                 to="/price_list"

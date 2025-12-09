@@ -35,11 +35,10 @@ const DateInputBox = ({
         <input
           ref={inputRef}
           type="date"
-          className={`border rounded-lg bg-light text-sm px-3 py-2.5 w-full pr-10 cursor-pointer
-            ${
-              error
-                ? "border-red-500 bg-red-50 text-red-600 placeholder:text-red-400"
-                : "border-gray-300 bg-surface hover:border-blue-400"
+          className={`border rounded-lg bg-surface text-sm px-3 py-2.5 w-full pr-10 cursor-pointer
+            ${error
+              ? "border-red-500 bg-red-50 text-red-600 placeholder:text-red-400"
+              : "border-gray-300 bg-surface hover:border-blue-400"
             }
             focus:outline-none focus:ring-2 focus:ring-blue-500 transition
             [&::-webkit-calendar-picker-indicator]:opacity-0

@@ -103,11 +103,14 @@ body {
   scrollbar-color: #e36e53 #f1f1f1; /* thumb / track */
 }
 select {
-  
   background-repeat: no-repeat;
   background-position: right 0.6rem center;
   background-size: 1.1rem;
 }
 select:hover {
   border-color: #e36e53;
+}
+button {
+  word-break: keep-all !important;
+  text-wrap: nowrap !important;
 }

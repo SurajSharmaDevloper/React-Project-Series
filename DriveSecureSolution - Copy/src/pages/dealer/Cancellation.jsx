@@ -33,9 +33,6 @@ const Cancellation = () => {
               <FileInput required label="Upload PAN Card" />
               <FileInput required label="Upload Policy Copy" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              <TextAreaBox label="Remarks" placeholder="Type Your Remarks" required rows={4} />
-            </div>
 
             {/* Submit Button */}
             <div className="pt-4 border-t border-gray-700 flex justify-end">
