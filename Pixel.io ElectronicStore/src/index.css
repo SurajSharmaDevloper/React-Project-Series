@@ -1,0 +1,35 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "tailwindcss";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c3aed; /* purple-600 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gray-200 */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6b21a8 #e5e7eb;
+}
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
